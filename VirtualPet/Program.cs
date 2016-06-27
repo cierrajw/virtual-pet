@@ -42,30 +42,35 @@ namespace VirtualPet
             }
             else if(choice == 1)
             {
+                myPet.Time();
                 myPet.FeedPet();
                 myPet.Stats();
                 myPet.Menu();
             }
             else if(choice == 2)
             {
+                myPet.Time();
                 myPet.GiveDrink();
                 myPet.Stats();
                 myPet.Menu();
             }
             else if(choice == 3)
             {
+                myPet.Time();
                 myPet.Play();
                 myPet.Stats();
                 myPet.Menu();
             }
             else if(choice == 4)
             {
+                myPet.Time();
                 myPet.PutToSleep();
                 myPet.Stats();
                 myPet.Menu();
             }
             else if(choice == 5)
             {
+                myPet.Time();
                 myPet.GiveMedicine();
                 myPet.Stats();
                 myPet.Menu();

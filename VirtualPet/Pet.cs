@@ -43,32 +43,42 @@ namespace VirtualPet
             }
             else if (choice == 1)
             {
+                Time();
                 FeedPet();
                 Stats();
                 Menu();
             }
             else if (choice == 2)
             {
+                Time();
                 GiveDrink();
                 Stats();
                 Menu();
             }
             else if (choice == 3)
             {
+                Time();
                 Play();
                 Stats();
                 Menu();
             }
             else if (choice == 4)
             {
+                Time();
                 PutToSleep();
                 Stats();
                 Menu();
             }
             else if (choice == 5)
             {
+                Time();
                 GiveMedicine();
                 Stats();
+                Menu();
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid menu option");
                 Menu();
             }
             Console.ReadKey();
@@ -83,7 +93,8 @@ namespace VirtualPet
 
         public void Time()
         {
-            Thread.Sleep(500);
+            Console.WriteLine("Hold on a sec...");
+            Thread.Sleep(4000);
         }
 
         public void Stats()
@@ -94,36 +105,6 @@ namespace VirtualPet
             Console.WriteLine("                                      Energy level: {0} ", Energy);
             Console.WriteLine("                                      Health level: {0} ", Health);
         }
-
-        //public void Stats()
-        //{
-        //    if (Hunger < 0)
-        //    {
-        //        Hunger = 0;
-        //        Console.WriteLine("{0};s hunger level is {1}", name, Hunger);
-        //        Hunger += Tick();
-        //    }
-        //    else if (Thirst < 0)
-        //    {
-        //        Console.WriteLine("{0};s thirst level is {1}", name, Thirst);
-        //        Thirst += Tick();
-        //    }
-        //    else if (Boredom < 0)
-        //    {
-        //        Console.WriteLine("{0};s boredom level is {1}", name, Boredom);
-        //        Boredom += Tick();
-        //    }
-        //    else if (Sleepiness < 0)
-        //    {
-        //        Console.WriteLine("{0};s sleepiness level is {1}", name, Sleepiness);
-        //        Sleepiness += Tick();
-        //    }
-        //    else if (Health < 0)
-        //    {
-        //        Console.WriteLine("{0};s health level is {1}", name, Health);
-        //        Health += Tick();
-        //    }
-        //}
 
         public void FeedPet()
         {

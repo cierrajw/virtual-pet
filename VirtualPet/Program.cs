@@ -32,41 +32,50 @@ namespace VirtualPet
             Console.WriteLine("5. Give me some medicine!");
             Console.WriteLine("6. Exit");
 
-            //Creating objects
-            Pet feed = new Pet("");
-            Pet drink = new Pet("");
-            Pet play = new Pet("");
-            Pet sleep = new Pet("");
-            Pet medicine = new Pet("");
+            int choice = Convert.ToInt32(Console.ReadLine());
 
-            int choice = Convert.ToInt32(Console.ReadLine()); 
+            Pet myPet = new Pet(); //Object
 
             if(choice == 6)
             {
-                //
+                Environment.Exit(0);
             }
             else if(choice == 1)
             {
-                feed.FeedPet();
+                myPet.FeedPet();
+                myPet.Stats();
+                myPet.Menu();
             }
             else if(choice == 2)
             {
-                //drink.GiveDrink();
+                myPet.GiveDrink();
+                myPet.Stats();
+                myPet.Menu();
             }
             else if(choice == 3)
             {
-                //play.Play();
+                myPet.Play();
+                myPet.Stats();
+                myPet.Menu();
             }
             else if(choice == 4)
             {
-                //sleep.PutToSleep();
+                myPet.PutToSleep();
+                myPet.Stats();
+                myPet.Menu();
             }
             else if(choice == 5)
             {
-                //medicine.GiveMedicine();
+                myPet.GiveMedicine();
+                myPet.Stats();
+                myPet.Menu();
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid menu option");
+                myPet.Menu();
             }
             Console.ReadKey();
-
         }
     }
 }
